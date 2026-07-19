@@ -8,7 +8,7 @@ public class DBUtility {
 
 	private static String url = "jdbc:postgresql://localhost:5432/jdbcdemo";
 	private static String username = "postgres";
-	private static String password = "Namdevrao888@";
+	private static String password = "";
 	private static Connection conn = null;
 	
 	public static Connection getConnection() {
