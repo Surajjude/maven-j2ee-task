@@ -34,4 +34,8 @@ public class Service {
 			return false;
 	}
 
+	public List<Player> getByTeam(String team) {
+		return dao.getAllPlayers().stream().filter(item->item.gettName().equals(team)).toList();
+	}
+
 }

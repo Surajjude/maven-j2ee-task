@@ -14,7 +14,7 @@ public class Controller {
 		
 		boolean pass = true;
 		while(pass) {
-			System.out.println("Enter 1.Get All Players    2.Add a Player   3.Update a Player   4.Delete a Player   5.End Program");
+			System.out.println("Enter 1.Get All Players    2.Add a Player   3.Update a Player   4.Delete a Player   5.Get Players By Team  6.End Program");
 			int choice = Integer.parseInt(sc.nextLine());
 			
 			switch(choice) {
@@ -77,9 +77,15 @@ public class Controller {
 				break;
 				
 			case 5:
-				pass = false;
+				System.out.println("Enter the Team name: ");
+				String team = sc.nextLine();
+				service.getByTeam(team).forEach(item->System.out.println(item));
 				break;
 			
+			case 6:
+				pass = false;
+				break;
+				
 			default:
 				System.out.println("Enter valid choise");
 			}
